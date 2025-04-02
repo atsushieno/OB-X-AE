@@ -129,7 +129,7 @@ function(apply_patch_if_needed PATCH_FILE SOURCE_DIR)
                 # Apply the patch
                 execute_process(
                         WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/${SOURCE_DIR}
-                        COMMAND git apply ${PATCH_FILE_ABS}
+                        COMMAND git apply ${PATCH_FILE_ABS} --ignore-space-change
                 )
                 file(TOUCH ${STAMP_FILE})
         endif()
