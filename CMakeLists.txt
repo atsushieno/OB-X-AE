@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_subdirectory(external/JUCE)
-add_subdirectory(external/clap-juce-extensions EXCLUDE_FROM_ALL)
+#add_subdirectory(external/clap-juce-extensions EXCLUDE_FROM_ALL)
 
 set(BaseTargetName OB-X-AE)
 
@@ -28,10 +28,10 @@ juce_add_plugin(${BaseTargetName}
         PRODUCT_NAME OB-X-AE
 )
 
-clap_juce_extensions_plugin(TARGET ${BaseTargetName}
-        CLAP_ID https://github.com/atsushieno/OB-X-AE
-        CLAP_FEATURES instrument
-)
+#clap_juce_extensions_plugin(TARGET ${BaseTargetName}
+#        CLAP_ID https://github.com/atsushieno/OB-X-AE
+#        CLAP_FEATURES instrument
+#)
 
 juce_generate_juce_header(${BaseTargetName})
 
